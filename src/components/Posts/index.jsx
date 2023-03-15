@@ -7,7 +7,7 @@ export default function Posts() {
 
       <header className={styles.header}>
         <div className={styles.avatar}>
-          <img src="https://github.com/junioralvesbr.png" alt="foto de avatar" />
+          <img src="https://github.com/junior2a.png" alt="foto de avatar" />
           <div>
             <h3>Jane Cooper</h3>
             <span>Dev Front-End</span>

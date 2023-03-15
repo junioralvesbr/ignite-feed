@@ -7,7 +7,7 @@ export default function Aside() {
       <img src="/rectangle.svg" alt="backgroudn image" />
 
       <div className={styles.profile}>
-        <img src="https://avatars.githubusercontent.com/junioralvesbr" alt="foto de avatar" />
+        <img src="https://github.com/junior2a.png" alt="foto de avatar" />
         <h2>Leslie Alexander</h2>
         <span>UI Designer</span>
       </div>
