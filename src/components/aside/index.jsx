@@ -1,4 +1,5 @@
 import { PencilSimpleLine } from '@phosphor-icons/react'
+import Avatar from '../Avatar'
 import styles from './styles.module.scss'
 
 export default function Aside() {
@@ -7,7 +8,7 @@ export default function Aside() {
       <img src="/rectangle.svg" alt="backgroudn image" />
 
       <div className={styles.profile}>
-        <img src="https://github.com/junior2a.png" alt="foto de avatar" />
+        <Avatar hasBorder src="https://github.com/junior2a.png" />
         <h2>Leslie Alexander</h2>
         <span>UI Designer</span>
       </div>

@@ -1,3 +1,4 @@
+import Avatar from '../Avatar'
 import Comments from '../Comments'
 import styles from './styles.module.scss'
 
@@ -6,8 +7,8 @@ export default function Posts() {
     <article className={styles.posts}>
 
       <header className={styles.header}>
-        <div className={styles.avatar}>
-          <img src="https://github.com/junior2a.png" alt="foto de avatar" />
+        <div className={styles.profile}>
+          <Avatar hasBorder src="https://github.com/junior2a.png" />
           <div>
             <h3>Jane Cooper</h3>
             <span>Dev Front-End</span>

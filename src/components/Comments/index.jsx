@@ -1,10 +1,11 @@
 import { ThumbsUp, Trash } from '@phosphor-icons/react'
+import Avatar from '../Avatar'
 import styles from './styles.module.scss'
 
 export default function Comments() {
   return (
     <article className={styles.comments}>
-      <img src="https://github.com/junior2a.png" alt="avatar" />
+      <Avatar hasBorder={false} src="https://github.com/junior2a.png" />
 
       <div className={styles.container}>
         <div className={styles.content}>
