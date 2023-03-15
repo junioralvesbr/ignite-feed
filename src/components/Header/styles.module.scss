@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  background-color: var(--gray-800);
+
+  &>span {
+    font-weight: bold;
+    font-size: 26px;
+    color: var(--gray-100)
+  }
+}
