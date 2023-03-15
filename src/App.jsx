@@ -2,6 +2,7 @@ import Aside from "./components/aside"
 import Header from "./components/Header/"
 
 import styles from './App.module.scss'
+import Posts from "./components/Posts"
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
 
       <div className={styles.wrapper}>
         <Aside />
+        <main>
+          <Posts />
+        </main>
       </div>
     </div>
   )
