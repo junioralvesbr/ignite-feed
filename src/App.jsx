@@ -1,8 +1,17 @@
-import Header from "./components/Header/Header"
+import Aside from "./components/aside"
+import Header from "./components/Header/"
+
+import styles from './App.module.scss'
 
 function App() {
   return (
-    <Header />
+    <div>
+      <Header />
+
+      <div className={styles.wrapper}>
+        <Aside />
+      </div>
+    </div>
   )
 }
 
