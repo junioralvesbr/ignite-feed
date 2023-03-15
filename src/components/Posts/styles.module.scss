@@ -127,5 +127,9 @@
         visibility: visible;
       }
     }
+
+    &>.comments {
+      margin-top: 32px;
+    }
   }
 }

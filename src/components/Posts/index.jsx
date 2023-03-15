@@ -1,3 +1,4 @@
+import Comments from '../Comments'
 import styles from './styles.module.scss'
 
 export default function Posts() {
@@ -42,6 +43,10 @@ export default function Posts() {
             <button>Publicar</button>
           </footer>
         </form>
+
+        <section className={styles.comments}>
+          <Comments />
+        </section>
 
       </main>
     </article>
