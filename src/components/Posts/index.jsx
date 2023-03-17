@@ -2,16 +2,16 @@ import Avatar from '../Avatar'
 import Comments from '../Comments'
 import styles from './styles.module.scss'
 
-export default function Posts() {
+export default function Posts({ id, author, content, links, publishedAt }) {
   return (
     <article className={styles.posts}>
 
       <header className={styles.header}>
         <div className={styles.profile}>
-          <Avatar hasBorder src="https://github.com/junior2a.png" />
+          <Avatar hasBorder src={author.avatar} />
           <div>
-            <h3>Jane Cooper</h3>
-            <span>Dev Front-End</span>
+            <h3>{author.name}</h3>
+            <span>{author.role}</span>
           </div>
         </div>
         <time title="15 de março de 2023" dateTime='2023-15-03'>
@@ -21,18 +21,19 @@ export default function Posts() {
 
       <main>
         <section>
-          <p>Fala galeraa 👋</p>
+          {content?.map(item => (
+            item.type === "paragraph" ?
+              <p>{item.post}</p>
+              :
+              <p>👉 <a href="#">{item.link}</a></p>
+          ))}
+
           <p>
-            Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
+            {links?.map(item => (
+              <a href="#">{item}</a>
+            ))}
           </p>
-          <p>
-            👉 <a href="#">jane.design/doctorcare</a>
-          </p>
-          <p>
-            <a href="#">#novoprojeto</a>
-            <a href="#">#nlw</a>
-            <a href="#">#rocketseat</a>
-          </p>
+
         </section>
 
         <form>

@@ -8,7 +8,7 @@ export default function Aside() {
       <img src="/rectangle.svg" alt="backgroudn image" />
 
       <div className={styles.profile}>
-        <Avatar hasBorder src="https://github.com/junior2a.png" />
+        <Avatar hasBorder src="https://github.com/junioralvesbr.png" />
         <h2>Leslie Alexander</h2>
         <span>UI Designer</span>
       </div>

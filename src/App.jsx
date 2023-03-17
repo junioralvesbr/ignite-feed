@@ -4,6 +4,8 @@ import Header from "./components/Header/"
 import styles from './App.module.scss'
 import Posts from "./components/Posts"
 
+import data from './data/data'
+
 function App() {
   return (
     <div>
@@ -12,7 +14,15 @@ function App() {
       <div className={styles.wrapper}>
         <Aside />
         <main>
-          <Posts />
+          {data?.map(item => (
+            <Posts
+              key={item.id}
+              author={item.author}
+              content={item.content}
+              links={item.links}
+              publishedAt={item.publishedAt}
+            />
+          ))}
         </main>
       </div>
     </div>
