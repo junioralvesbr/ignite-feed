@@ -1,8 +1,12 @@
+import { format, formatDistance } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 import Avatar from '../Avatar'
 import Comments from '../Comments'
 import styles from './styles.module.scss'
 
 export default function Posts({ id, author, content, links, publishedAt }) {
+  const date = format(publishedAt, "MM/dd/yyyy hh:mm")
+  console.log(date)
   return (
     <article className={styles.posts}>
 
@@ -14,23 +18,26 @@ export default function Posts({ id, author, content, links, publishedAt }) {
             <span>{author.role}</span>
           </div>
         </div>
-        <time title="15 de março de 2023" dateTime='2023-15-03'>
-          Públicado a 1h
+        <time
+          title={format(publishedAt, "dd 'de' LLLL 'de' yyyy", { locale: ptBR })}
+          dateTime={format(publishedAt, "MM/dd/yyyy")}
+        >
+          {formatDistance(Date.now(), publishedAt, { addSuffix: true, locale: ptBR })}
         </time>
       </header>
 
       <main>
         <section>
-          {content?.map(item => (
+          {content?.map((item, index) => (
             item.type === "paragraph" ?
-              <p>{item.post}</p>
+              <p key={index}>{item.post}</p>
               :
-              <p>👉 <a href="#">{item.link}</a></p>
+              <p key={index}>👉 <a href="#">{item.link}</a></p>
           ))}
 
           <p>
-            {links?.map(item => (
-              <a href="#">{item}</a>
+            {links?.map((item, index) => (
+              <a href="#" key={index}>{item}</a>
             ))}
           </p>
 
